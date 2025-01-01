@@ -1,0 +1,149 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MANOJ MD</title>
+  <style>
+    /* General body styling */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: url('images/N62kjJkIDvua.jpeg') no-repeat center center/cover;
+      background-attachment: fixed;
+      overflow: hidden;
+      color: white;
+    }
+
+    /* Background overlay */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+
+    /* Button container */
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+    }
+
+    h1 {
+      font-size: 3.5em;
+      margin-bottom: 40px;
+      color: #00FF00;
+      text-shadow: 0 0 10px #00FF00, 0 0 30px #00FF00;
+      cursor: pointer;
+      animation: pulse 2s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    /* Neon glass button styling */
+    .btn {
+      position: relative;
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #fff;
+      text-transform: uppercase;
+      border: none;
+      background: rgba(0, 255, 0, 0.2);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+      width: 280px;
+      text-align: center;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 150%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(0, 255, 0, 0.4), transparent);
+      transition: all 0.4s;
+      transform: skewX(-25deg);
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px rgba(0, 255, 0, 0.7);
+    }
+
+    .btn:hover::before {
+      left: 100%;
+    }
+
+    .btn:focus {
+      outline: none;
+    }
+
+    /* Easter egg styling */
+    .easter-egg {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #FFD700;
+      animation: fadeIn 0.5s ease-in forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive design */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.5em;
+      }
+
+      .btn {
+        font-size: 1rem;
+        width: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="button-container">
+    <h1 onclick="revealEasterEgg()">MANOJ MD</h1>
+    <button onclick="window.open('/pair')" class="btn">Pair Code</button>
+    <button onclick="window.open('https://replit.com/@obidikechikadib/Toxic-Creds#main.sh')" class="btn">Creds Json</button>
+    <button onclick="window.open('https://github.com/MANOJTRICKS/MANOJ-MD')" class="btn">MANOJ V1</button>
+    <button onclick="window.open('https://github.com/MANOJTRICKS/MANOJ-MD')" class="btn">MANOJ V2</button>
+    <button onclick="window.open('https://github.com/MANOJTRICKS/MANOJ-MD')" class="btn">MANOJ V3</button>
+    <button onclick="window.open('https://wa.me/7005439105')" class="btn">Contact Me</button>
+    <button onclick="window.open('https://whatsapp.com/channel/0029VaT1ewtI1rcbm9xB4s0U')" class="btn">Wa Channel</button>
+    <div id="easter-egg" class="easter-egg">🎉 Congratulations! You found the Easter Egg! Keep exploring! 🚀</div>
+  </div>
+
+  <script>
+    function revealEasterEgg() {
+      const easterEgg = document.getElementById('easter-egg');
+      easterEgg.style.display = 'block';
+    }
+  </script>
+
+</body></html>
